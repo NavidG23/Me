@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tabs</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+  <script>
+      $( function() 
+        {
+            $( "#tabs" ).tabs();
+        } );
+  </script>
+    
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="#tab1">Home</a></li>
+    <li><a href="#tab2">HW2</a></li>
+    <li><a href="#tab3">HW3</a></li>
+  </ul>
+  <div id="tab1">
+    <p>Homepage</p>
+  </div>
+  <div id="tab2">
+    <p>Homework 2</p>
+  </div>
+  <div id="tab3">
+    <p>Homework 3</p>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>
