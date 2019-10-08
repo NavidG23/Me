@@ -34,8 +34,3 @@ function onScroll() {
 		tabActive(document.getElementById("contactTab"), 'contactTab');
 	}
 }
-
-function highlightLink(anchor) {
-	$('nav .active').removeClass('active');
-	$("nav").find('[dest="' + anchor + '"]').addClass('active');
-}
