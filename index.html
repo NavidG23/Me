@@ -1,138 +1,187 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <script src="javascript/scripts/script.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--        <script src="C:\Users\HP\jquery-3.3.1.min.js"></script>-->
-        <title>Navid Galt</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!--Social Media Icon Style-->
-        <style>
-            .fa 
-            {
-                padding: 20px;
-                font-size: 50px;
-                width: 90px;
-                text-align: center;
-                text-decoration: none;
-                margin: 5px 10px;
-                border-radius: 50%;
-            }
-            .fa:hover 
-            {
-                opacity: 0.7;
-            }   
-        </style>
+	<head>
+		<title>Navid's Website</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body class="w3-black">
+		<!-- Icon Bar (Sidebar - hidden on small screens) -->
+		<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+			<!-- Avatar image in top left corner -->
+			<img src="images/mountain.jpg" style="width:100%">
+			<a id="homeTab" href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black panel-buttons"
+			onclick="tabActive(this, 'home')">
+				<i class="fa fa-home w3-xxlarge"></i>
+				<p>HOME</p>
+			</a>
+			<a id="aboutTab" href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black panel-buttons"
+				onclick="tabActive(this, 'about')">
+				<i class="fa fa-user w3-xxlarge"></i>
+				<p>ABOUT</p>
+			</a>
+			<a id="photosTab" href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black panel-buttons"
+				onclick="tabActive(this, 'photos')">
+				<i class="fa fa-eye w3-xxlarge"></i>
+				<p>PORTFOLIO</p>
+			</a>
+			<a id="contactTab" href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black panel-buttons"
+				onclick="tabActive(this, 'contact')">
+				<i class="fa fa-envelope w3-xxlarge"></i>
+				<p>CONTACT</p>
+			</a>
+		</nav>
 
-    </head>
+		<!-- Navbar on small screens (Hidden on medium and large screens) -->
+		<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+			<div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+				<a id="homeTab" href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+				<a id="aboutTab" href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+				<a id="photosTab" href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PORTFOLIO</a>
+				<a id="contactTab" href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+			</div>
+		</div>
 
-    <body>    
-        <div class="centerbox">
-            
-                <button class="tablink" onclick="openPage('Home', this, '#73AD21')"  id="defaultOpen">Home</button>
-            
-                <button class="tablink" onclick="openPage('About', this, 'mediumaquamarine')" >More About Me</button>
-            
-                <button class="tablink" onclick="openPage('Projects', this, 'forestgreen')">Projects</button>
-            
-                <button class="tablink" onclick="openPage('Resume', this, 'paleturquoise')">Resume</button>
-            
-                <button class="tablink" onclick="openPage('Contact', this, 'lightsalmon')" >Contact</button>
-            
-                <div id="Home" class="tabcontent">
-                    <div align = "center"><img class = "mypic" height=auto width=auto src="images/me.jpg" alt="Navid Pic" border="10"/></div>
-                    <center>
-                        <div class="textInHome"> 
-                            <h1>Hi! I'm Navid Galt</h1>
-                            <h2>
-                                Software Engineer and Full-Time Masters Student
-                                <br>
-                                <br>
-                                <br>
-                                <q>I have no special talents. I am only passionately curious.</q>
-                                -Albert Einstein
-                            </h2>
-                            
-                            <a href="https://www.facebook.com/navid.galt" class="fa fa-facebook"></a>
-                            <a href="https://www.snapchat.com/add/ngalt" class="fa fa-snapchat-ghost"></a>
-                            <a href="https://www.linkedin.com/in/navid-galt-7a39b0bb/" class="fa fa-linkedin"></a>
-                            <a href="https://www.instagram.com/ngalt23/" class="fa fa-instagram"></a>
-                            
-                            
-                        </div>
-                    </center>
-                </div>
+		<!-- Page Content -->
+		<div class="w3-padding-large" id="main">
+			<!-- Header/Home -->
+			<header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+				<h2 class="w3-jumbo"><span class="w3-hide-small">Hello, I'm</span> <span style="color:blue;"><b>Navid Galt.</b></span></h2>
+				<h2>I'm a full-stack software engineer.</h2>
+				<img src="images/mountain.jpg" alt="boy" class="w3-image" width="550" height="500">
+				<h3>
+					<q>I have no special talents. I am only passionately curious.</q>
+					-Albert Einstein
+				</h3>
+			</header>
 
-                <div id="About" class="tabcontent">
-                    <div align = "center"><img class = "mypic" height=auto width=auto src="images/me.jpg" alt="Navid Pic" border="10"/></div>
-                    <center>
-                        <div class = "textInAboutMe"> 
-                            <h2><u>More About Me</u></h2>
-                            <p>
-                                I am a full-time Masters Student at George Mason University pursuing a degree in Software Engineering. My main language I enjoy working with is Java however I have also dabbled with C++, HTML5, CSS, and JavaScript. My hobbies include but are not limited to mountain biking, snowboarding, playing chess and reading about astrophysics and Space Exploration!
-                            </div>
-                    </center>
-                </div>
+			<!-- About Section -->
+			<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+				<h2 class="w3-text-light-grey">About Me</h2>
+				<hr style="width:200px" class="w3-opacity">
+				<p>I am a Full-Stack Software Engineer at Deloitte. I am completing my Masters in Software Engineering at George
+					Mason University. I am familiar with an array of languages including Java, JavaScript, Python, HTML5, CSS.
+					My hobbies include but are not limited to mountain biking, snowboarding, playing fetch with my puppy, playing chess and reading about
+					astrophysics and Space Exploration!
+				</p>
+				<h3 class="w3-padding-16 w3-text-light-grey">My Skills and Proficiencies (Warning: Percentages are subjective)
+				</h3>
+				<p class="w3-wide">Java</p>
+				<div class="w3-white">
+					<div class="w3-dark-grey" style="height:28px;width:80%"></div>
+				</div>
+				<p class="w3-wide">JavaScript</p>
+				<div class="w3-white">
+					<div class="w3-dark-grey" style="height:28px;width:75%"></div>
+				</div>
+				<p class="w3-wide">HTML5</p>
+				<div class="w3-white">
+					<div class="w3-dark-grey" style="height:28px;width:95%"></div>
+				</div><br>
+				<p class="w3-wide">CSS</p>
+				<div class="w3-white">
+					<div class="w3-dark-grey" style="height:28px;width:95%"></div>
+				</div><br>
+				<p class="w3-wide">Angular</p>
+				<div class="w3-white">
+					<div class="w3-dark-grey" style="height:28px;width:45%"></div>
+				</div><br>
+				<p class="w3-wide">Node.js</p>
+				<div class="w3-white">
+					<div class="w3-dark-grey" style="height:28px;width:50%"></div>
+				</div><br>
+				<p class="w3-wide">Python</p>
+				<div class="w3-white">
+					<div class="w3-dark-grey" style="height:28px;width:50%"></div>
+				</div><br>
 
-                <div id="Projects" class="tabcontent">
-                    <div align = "center"><img class = "mypic" height=auto width=auto src="images/me.jpg" alt="Navid Pic" border="10"/></div>
-                    <center>
-                        <div class = "textInProjects">
-                            <h2><u>Projects and Papers</u></h2>
-                        </div>                      
-                        <div id="WrapperDiv" class="wrapper">
-                            <div id="RightDiv" class="float-right">
-                                <h3>Papers</h3>
-                                    <div align = "left">
-                                        <a href = "pdfs/TheUntrainedEar.pdf" class="fa fa-file-pdf-o" style="font-size:36px"></a>The Untrained Ear
-                                        <br>
-                                        <a href = "pdfs/PingsAndPongs.pdf" class="fa fa-file-pdf-o" style="font-size:36px"></a>Pings And Pongs: A Journey with Networks, Their Hosts and Their Routes
-                                    </div>
-                            </div>
-                            
-                            <div id="LeftDiv" class="float-left">
-                                <h3>Check out my Github page for projects!</h3>
-                                <a href = "https://github.com/NavidG23" class="fa fa-github" style="font-size:80px;color:black"></a>
-                            </div>  
-                        </div>
-                    </center>
-                </div>
+				<div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+					<div class="w3-third w3-section">
+						<span class="w3-xlarge">1+ Years</span><br>
+						Work Experience
+					</div>
+					<div class="w3-third w3-section">
+						<span class="w3-xlarge">3+ Years</span><br>
+						Programming Experience
+					</div>
+					<div class="w3-third w3-section">
+						<span class="w3-xlarge">26+ Years</span><br>
+						Life Experience
+					</div>
+				</div>
+			</div>
 
-                <div id="Resume" class="tabcontent">
-                    <div align = "center"><img class = "mypic" height=auto width=auto src="images/me.jpg" alt="Navid Pic" border="10"/></div>
-                    <center>
-                        <div class = "textInResume"> 
-                            <h2><u>Resume</u></h2>
-                            <h3>Check out my Resume:          
-                                <a href = "pdfs/NavidsResume.pdf" class="fa fa-file-pdf-o" style="font-size:36px"></a>
-                            </h3>
-                        </div>
-                    </center>
-                </div>
+			<!-- Portfolio Section -->
+			<div class="w3-padding-64 w3-content" id="photos">
+				<h2 class="w3-text-light-grey">My Portfolio</h2>
+				<hr style="width:200px" class="w3-opacity">
+				<!-- Grid for papers -->
+				<h3 class="w3-padding-16 w3-text-light-grey">Papers</h3>
+				<div class="w3-row-padding" style="margin:0 -16px">
+					<div class="w3-full w3-margin-bottom">
+						<ul class="w3-ul w3-white w3-center">
+							<li class="w3-padding-16">
+								<a href="pdfs/NavidMutationFinalPaper.pdf" target="_blank" class="fa fa-file-pdf-o pdf-icon"></a>
+								Humans Versus Mutants: A Controlled Experiment Analyzing <br> the Types of Mutation Operators Human-Based
+								Testing Tend to Miss
+							</li>
+							<li class="w3-padding-16">
+								<a href="pdfs/TheUntrainedEar" target="_blank" class="fa fa-file-pdf-o pdf-icon"
+									style="line-height:20px;"></a>
+								The Untrained Ear: A Comparative Audio Format Experiment
+							</li>
+							<li class="w3-padding-16">
+								<a href="pdfs/PingsAndPongs.pdf" target="_blank" class="fa fa-file-pdf-o pdf-icon"
+									style="line-height:20px;"></a>
+								Pings and Pongs: A Journey with Networks, Their Hosts and Their Routes
+							</li>
+							<li class="w3-padding-16">
+								<a href="pdfs/AVLTrees.pdf" target="_blank" class="fa fa-file-pdf-o pdf-icon"
+									style="line-height:20px;"></a>
+								A Literature Review on AVL Trees
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<h3 class="w3-padding-16 w3-text-light-grey">Github</h3>
+				<a href="https://github.com/NavidG23" class="fa fa-github github-icon"></a>
 
-                <div id="Contact" class="tabcontent">
-                    <div align = "center"><img class = "mypic" height=auto width=auto src="images/me.jpg" alt="Navid Pic" border="10"/></div>
-                    <center>
-                        <div class = "textInContactMe">
-                            <h2><u>Contact Information</u></h2>
-                            <h3 >
-                                Cell: (703) 627-3445
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                Email: navd.galt@gmail.com
-                            </h3>
-                        </div>
-                    </center>
-                </div>
-            <script>
-                // Get the element with id="defaultOpen" and click on it
-                document.getElementById("defaultOpen").click();
-            </script>
-        </div> 
-    </body>
+				<!-- Grid for photos -->
+				<h3 class="w3-padding-16 w3-text-light-grey">Resume</h3>
+				<a href="pdfs/Navid Programming Resume.pdf" class="fa fa-file-pdf-o pdf-icon"></a>
+				<p class="my-resume-text">Navid's Resume</p>
+			</div>
+
+			<!-- Contact Section -->
+			<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+				<h2 class="w3-text-light-grey">Contact Me</h2>
+				<hr style="width:200px" class="w3-opacity">
+
+				<div class="w3-section">
+					<p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Fairfax, Virginia, US</p>
+					<p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (703) 627-3445</p>
+					<p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: navd.galt@gmail.com</p>
+				</div><br>
+			</div>
+
+			<!-- Footer -->
+			<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+				<a href="https://www.facebook.com/navid.galt" class="fa fa-facebook-official w3-hover-opacity social-media-icons"
+					target="_blank"></a>
+				<a href="https://www.instagram.com/ngalt23/" class="fa fa-instagram w3-hover-opacity social-media-icons"
+					target="_blank"></a>
+				<a href="https://www.snapchat.com/add/ngalt" class="fa fa-snapchat w3-hover-opacity social-media-icons"
+					target="_blank"></a>
+				<a href="https://www.linkedin.com/in/navid-galt-7a39b0bb/"
+					class="fa fa-linkedin w3-hover-opacity social-media-icons" target="_blank"></a>
+			</footer>
+		</div>
+	</body>
 </html>

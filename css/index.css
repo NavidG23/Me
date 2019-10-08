@@ -1,0 +1,81 @@
+.w3-row-padding img {
+	margin-bottom: 12px !important;
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+	background: #222 !important;
+}
+
+body, h1,h2,h3,h4,h5,h6 {
+	font-family: "Montserrat", sans-serif !important;
+}
+
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+	margin-left: 200px !important;
+}
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+	#main {
+		margin-left: 0 !important;
+	}
+}
+
+.pdf-icon {
+	font-size:36px !important;
+	float: left;
+}
+.pdf-icon:hover {
+	font-size:52px !important;
+	color: blue;
+	margin-right: 10px;
+}
+
+.my-resume-text {
+	margin-left: 40px;
+	line-height: 40px;
+}
+
+.github-icon {
+	font-size:80px !important;
+	color:white;
+}
+
+.github-icon:hover {
+	font-size:100px !important;
+	color:blue;
+}
+
+.social-media-icons {
+	text-decoration: none;
+	font-size: 45px !important;
+	margin: 2px;
+}
+.social-media-icons:hover {
+	font-size: 65px !important;
+}
+
+.panel-buttons:active {
+	background-color: black;
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Montserrat", sans-serif;
+}
+.w3-row-padding img {
+	margin-bottom: 12px;
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+	width: 120px;
+	background: #222;
+}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+	margin-left: 120px;
+}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+	#main {margin-left: 0}
+}
